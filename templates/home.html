@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+  <br />
+  <div class="jumbotron">
+    <h1 class="display-4">Newspaper app</h1>
+    <p class="lead">Welcome to my newspaper app. You can view articles,
+    comment on articles, and create your own articles.
+    <a href="{% url 'login' %}">Login</a> or
+    <a href="{% url 'signup' %}">sign up</a>.</p>
+    <p class="lead">Built by the NewTechCoder. Visit <a href="https://github.com/NewTechCoder">NewTechCoder</a> for the project git repos.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}"
+	role="button">View all Articles</a>
+    </p>
+  </div>
+{% endblock content %}
